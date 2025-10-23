@@ -10,4 +10,5 @@ package util;
  */
 public class PRUEBAGIT {
     private String github;
+    private int calculadra;
 }
