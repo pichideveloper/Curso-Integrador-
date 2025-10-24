@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.mycompany.projectofinalpoo"},{"l":"enlaces"},{"l":"GUIBuscar"},{"l":"GUIEntrada"},{"l":"GUISalida"},{"l":"util"}];updateSearchResults();

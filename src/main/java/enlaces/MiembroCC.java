@@ -20,61 +20,79 @@ public class MiembroCC {
     }
    
 public boolean agregarMiembro(int dni, String nombre, String apellido, int edad, String deporte, String membresia, int tiempo, double mensualidad) {
-    String sql = "INSERT INTO TablaMiembros (dni, nombre, apellido, edad, deporte, membresia, tiempo, mensualidad) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-    try (Connection conn = new CConexion().establecerConexion();
-         PreparedStatement pstmt = conn.prepareStatement(sql)) {
-        
-        pstmt.setInt(1, dni);
-        pstmt.setString(2, nombre);
-        pstmt.setString(3, apellido);
-        pstmt.setInt(4, edad);
-        pstmt.setString(5, deporte);
-        pstmt.setString(6, membresia);
-        pstmt.setInt(7, tiempo);
-        pstmt.setDouble(8, mensualidad);
-        
-        int rowsAffected = pstmt.executeUpdate();
-        return rowsAffected > 0;  
-    } catch (SQLException e) {
-        System.out.println("Error al agregar miembro: " + e.getMessage());
-        e.printStackTrace();
-        return false;  
+        String sql = "INSERT INTO TablaMiembros (dni, nombre, apellido, edad, deporte, membresia, tiempo, mensualidad) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        try (Connection conn = new CConexion().establecerConexion();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setInt(1, dni);
+            pstmt.setString(2, nombre);
+            pstmt.setString(3, apellido);
+            pstmt.setInt(4, edad);
+            pstmt.setString(5, deporte);
+            pstmt.setString(6, membresia);
+            pstmt.setInt(7, tiempo);
+            pstmt.setDouble(8, mensualidad);
+
+            int rowsAffected = pstmt.executeUpdate();
+            return rowsAffected > 0;
+
+        } catch (SQLException e) {
+            System.out.println(" Error al agregar miembro: " + e.getMessage());
+            e.printStackTrace();
+            return false;
+        }
     }
-}
-    
-public boolean eliminarMiembro(int id_miembro) {
-    String sql = "DELETE FROM TablaMiembros WHERE ID = ?";
 
-    CConexion con = new CConexion();
-    Connection ELIMINAR1 = con.establecerConexion();
+public boolean eliminarMiembro(int id) {
+        String sql = "DELETE FROM TablaMiembros WHERE id = ?";
+        try (Connection conn = new CConexion().establecerConexion();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-    try (PreparedStatement pst = ELIMINAR1.prepareStatement(sql)) {
-        pst.setInt(1, id_miembro);
-        int filasAfectadas = pst.executeUpdate(); 
-        return filasAfectadas > 0; 
-    } catch (SQLException e) {
-        JOptionPane.showMessageDialog(null, "error al eliminar" + e.getMessage());
-        return false; 
+            pstmt.setInt(1, id);
+            int rowsAffected = pstmt.executeUpdate();
+            return rowsAffected > 0;
+
+        } catch (SQLException e) {
+            System.out.println(" Error al eliminar miembro: " + e.getMessage());
+            e.printStackTrace();
+            return false;
+        }
     }
-}
 
- public boolean actualizarDato(int id_miembro, String columna, String nuevoValor) {
-    String sql = "UPDATE TablaMiembros SET " + columna + " = ? WHERE ID = ?";
-    CConexion con = new CConexion();
-    Connection conexionACTUALIZAR = con.establecerConexion();
 
-    try (PreparedStatement pst = conexionACTUALIZAR.prepareStatement(sql)) {
-        pst.setString(1, nuevoValor);
-        pst.setInt(2, id_miembro);
+ public boolean actualizarDato(int id, String columna, String nuevoValor) {
+        String[] columnasPermitidas = {"dni", "nombre", "apellido", "edad", "deporte", "membresia", "tiempo", "mensualidad"};
+        boolean columnaValida = false;
 
-        int filasAfectadas = pst.executeUpdate();
-        return filasAfectadas > 0; 
-    } catch (SQLException e) {
-        JOptionPane.showMessageDialog(null, "error al actualizar dato: " + e.getMessage());
-        return false;
+        for (String c : columnasPermitidas) {
+            if (c.equalsIgnoreCase(columna)) {
+                columnaValida = true;
+                break;
+            }
+        }
+
+        if (!columnaValida) {
+            System.out.println("️ Columna no válida: " + columna);
+            return false;
+        }
+
+        String sql = "UPDATE TablaMiembros SET " + columna + " = ? WHERE id = ?";
+        try (Connection conn = new CConexion().establecerConexion();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setString(1, nuevoValor);
+            pstmt.setInt(2, id);
+            int rowsAffected = pstmt.executeUpdate();
+            return rowsAffected > 0;
+
+        } catch (SQLException e) {
+            System.out.println(" Error al actualizar dato: " + e.getMessage());
+            e.printStackTrace();
+            return false;
+        }
     }
-} 
- public boolean existeDNI(String dni) {
+ 
+public boolean existeDNI(String dni) {
     String sql = "SELECT COUNT(*) AS total FROM TablaMiembros WHERE dni = ?";
     Connection conn = conexion.establecerConexion();
 
