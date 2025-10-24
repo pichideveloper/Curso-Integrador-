@@ -99,7 +99,7 @@ Integer xMouse,yMouse;
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Manchester");
+        jLabel4.setText("Club Dema");
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icono.png"))); // NOI18N
 
@@ -280,7 +280,7 @@ Integer xMouse,yMouse;
         txtingresar.setText("Ingresar");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        jLabel3.setText("\"Manchester\"");
+        jLabel3.setText("CLUB DEMA");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Selecciona En Donde Se Realizara La Accion");

@@ -144,7 +144,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Manchester"/>
+                <Property name="text" type="java.lang.String" value="Club Dema"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel5">
@@ -484,7 +484,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="3"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="&quot;Manchester&quot;"/>
+                <Property name="text" type="java.lang.String" value="CLUB DEMA"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel2">

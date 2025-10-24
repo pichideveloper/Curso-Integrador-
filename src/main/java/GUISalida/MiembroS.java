@@ -358,7 +358,7 @@ private void exportarPDF() {
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Manchester");
+        jLabel3.setText("Club Dema");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icono.png"))); // NOI18N
 
@@ -426,7 +426,7 @@ private void exportarPDF() {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel17)))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -480,6 +480,7 @@ private void exportarPDF() {
         jPanel3.setBackground(new java.awt.Color(197, 161, 115));
 
         btnExportarExcel.setBackground(new java.awt.Color(219, 183, 136));
+        btnExportarExcel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnExportarExcel.setText("Excel");
         btnExportarExcel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -488,6 +489,7 @@ private void exportarPDF() {
         });
 
         jButton2.setBackground(new java.awt.Color(219, 183, 136));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton2.setText("Eliminar Miembro");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -496,6 +498,7 @@ private void exportarPDF() {
         });
 
         jButton4.setBackground(new java.awt.Color(219, 183, 136));
+        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton4.setText("Actualizar Miembro");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -504,6 +507,7 @@ private void exportarPDF() {
         });
 
         btnExportarPDF.setBackground(new java.awt.Color(219, 183, 136));
+        btnExportarPDF.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnExportarPDF.setText("PDF");
         btnExportarPDF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -512,6 +516,7 @@ private void exportarPDF() {
         });
 
         btnEliminarTodo.setBackground(new java.awt.Color(219, 183, 136));
+        btnEliminarTodo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnEliminarTodo.setText("Eliminar Todo");
         btnEliminarTodo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -530,7 +535,7 @@ private void exportarPDF() {
                 .addComponent(btnEliminarTodo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
                 .addComponent(btnExportarExcel)
                 .addGap(18, 18, 18)
                 .addComponent(btnExportarPDF)

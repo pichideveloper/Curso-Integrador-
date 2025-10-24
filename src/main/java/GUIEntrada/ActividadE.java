@@ -93,7 +93,7 @@ public class ActividadE extends javax.swing.JFrame {
         }
         Date fechaSeleccionada = calenderfecha.getDate();
         if (fechaSeleccionada == null) {
-            JOptionPane.showMessageDialog(null, "Ingrese una fecha válida");
+            JOptionPane.showMessageDialog(null, "Ingrese una fecha valida");
             return;
         }
   
@@ -120,7 +120,7 @@ public class ActividadE extends javax.swing.JFrame {
         String[] datosEntrenador = actividadDAO.buscarEntenadorPorDNI(dni);
         
         if (datosEntrenador == null) {
-            JOptionPane.showMessageDialog(null, "Ese DNI no está en la base de datos");
+            JOptionPane.showMessageDialog(null, "Ese DNI no esta en la base de datos");
             return;
         }
         if (actividadDAO.verificarConflictoHorario(fecha, horaInicio.toString(), horaFin.toString())) {
@@ -274,6 +274,7 @@ private class FiltroTexto extends DocumentFilter {
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton9.setBackground(new java.awt.Color(219, 183, 136));
+        jButton9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton9.setText("Ingresar Datos");
         jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -285,6 +286,7 @@ private class FiltroTexto extends DocumentFilter {
 
         jButton2.setText("Verificar DNI");
         jButton2.setBackground(new java.awt.Color(219, 183, 136));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -294,7 +296,7 @@ private class FiltroTexto extends DocumentFilter {
 
         jPanel1.setBackground(new java.awt.Color(207, 0, 21));
 
-        jLabel3.setText("Manchester");
+        jLabel3.setText("Club Dema");
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -358,7 +360,7 @@ private class FiltroTexto extends DocumentFilter {
                             .addComponent(jLabel15)
                             .addComponent(jLabel16)
                             .addComponent(jLabel14))))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -418,6 +420,7 @@ private class FiltroTexto extends DocumentFilter {
         jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         jLabel5.setText("Datos de la Actividad");
+        jLabel5.setFont(new java.awt.Font("Sitka Heading", 1, 14)); // NOI18N
 
         jSeparator1.setBackground(new java.awt.Color(153, 153, 153));
         jSeparator1.setForeground(new java.awt.Color(153, 153, 153));
@@ -437,6 +440,7 @@ private class FiltroTexto extends DocumentFilter {
         jLabel25.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
         jLabel1.setText("Datos del Entrenador:");
+        jLabel1.setFont(new java.awt.Font("Sitka Heading", 1, 14)); // NOI18N
 
         jSeparator2.setBackground(new java.awt.Color(153, 153, 153));
         jSeparator2.setForeground(new java.awt.Color(153, 153, 153));
@@ -491,7 +495,7 @@ private class FiltroTexto extends DocumentFilter {
                                         .addComponent(nombre1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(apellido1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE))))
                             .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(27, Short.MAX_VALUE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel18)
@@ -502,7 +506,7 @@ private class FiltroTexto extends DocumentFilter {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(jLabel18)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

@@ -273,8 +273,8 @@ private class FiltroTexto extends DocumentFilter {
         txtanos.setBorder(null);
         bg.add(txtanos, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 360, 240, 20));
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel5.setText("Membresía ");
+        jLabel5.setFont(new java.awt.Font("Sitka Heading", 1, 14)); // NOI18N
+        jLabel5.setText("Membresia ");
         bg.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, -1, -1));
 
         txtdni.setBorder(null);
@@ -291,6 +291,7 @@ private class FiltroTexto extends DocumentFilter {
         jPanel2.setBackground(new java.awt.Color(197, 161, 115));
 
         jButton1.setBackground(new java.awt.Color(219, 183, 136));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton1.setText("Verificar DNI");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -299,6 +300,7 @@ private class FiltroTexto extends DocumentFilter {
         });
 
         jButton5.setBackground(new java.awt.Color(219, 183, 136));
+        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton5.setText("Ingresar Datos");
         jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -312,16 +314,16 @@ private class FiltroTexto extends DocumentFilter {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addGap(35, 35, 35)
                 .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 191, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
                 .addComponent(jButton5)
                 .addGap(53, 53, 53))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
+                .addContainerGap(21, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton5))
@@ -335,7 +337,7 @@ private class FiltroTexto extends DocumentFilter {
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Manchester");
+        jLabel3.setText("Club Dema");
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icono.png"))); // NOI18N
 
@@ -396,7 +398,7 @@ private class FiltroTexto extends DocumentFilter {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel17)))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -435,7 +437,7 @@ private class FiltroTexto extends DocumentFilter {
         jSeparator2.setForeground(new java.awt.Color(153, 153, 153));
         bg.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 400, 10));
 
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Sitka Heading", 1, 14)); // NOI18N
         jLabel12.setText("Miembro");
         bg.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, -1, -1));
 
