@@ -1,4 +1,28 @@
 -------------------------------------------------------------------------------
 Test set: Test.MiembroCCTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.139 s -- in Test.MiembroCCTest
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 9.363 s <<< FAILURE! -- in Test.MiembroCCTest
+Test.MiembroCCTest.testActualizarDato_Exito -- Time elapsed: 6.866 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: El nombre deberia haberse actualizado correctamente ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at Test.MiembroCCTest.testActualizarDato_Exito(MiembroCCTest.java:59)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+Test.MiembroCCTest.testEliminarMiembro_Exito -- Time elapsed: 0.472 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: El miembro deberia haberse eliminado correctamente ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at Test.MiembroCCTest.testEliminarMiembro_Exito(MiembroCCTest.java:67)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
