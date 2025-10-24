@@ -19,31 +19,27 @@ public class MiembroCC {
         conexion = new CConexion();
     }
    
-
-    public void agregarMiembro(int dni,String nombre, String apellido, int edad, String deporte, String membresia, int tiempo,double mensualidad) {
+public boolean agregarMiembro(int dni, String nombre, String apellido, int edad, String deporte, String membresia, int tiempo, double mensualidad) {
+    String sql = "INSERT INTO TablaMiembros (dni, nombre, apellido, edad, deporte, membresia, tiempo, mensualidad) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    try (Connection conn = new CConexion().establecerConexion();
+         PreparedStatement pstmt = conn.prepareStatement(sql)) {
         
+        pstmt.setInt(1, dni);
+        pstmt.setString(2, nombre);
+        pstmt.setString(3, apellido);
+        pstmt.setInt(4, edad);
+        pstmt.setString(5, deporte);
+        pstmt.setString(6, membresia);
+        pstmt.setInt(7, tiempo);
+        pstmt.setDouble(8, mensualidad);
         
-    String sql = "INSERT INTO TablaMiembros (dni,nombre, apellido, edad, deporte, membresia, tiempo,mensualidad) VALUES (?,? , ?, ?, ?, ?, ?, ?)";
-    Connection conn = conexion.establecerConexion();
-
-    try (PreparedStatement statement = conn.prepareStatement(sql)) {
-        statement.setInt(1, dni);
-        statement.setString(2, nombre);
-        statement.setString(3, apellido);
-        statement.setInt(4, edad);
-        statement.setString(5, deporte);
-        statement.setString(6, membresia.toLowerCase()); 
-        statement.setInt(7, tiempo);
-        statement.setDouble(8, mensualidad);
-
-        statement.executeUpdate();
+        int rowsAffected = pstmt.executeUpdate();
+        return rowsAffected > 0;  
     } catch (SQLException e) {
-        if (e.getMessage().contains("duplicado")) { 
-            JOptionPane.showMessageDialog(null, "dni registrado con anterioridad");
-        } else {
-            JOptionPane.showMessageDialog(null, "error al agregar miembro: " + e.getMessage());
-        }
-    } 
+        System.out.println("Error al agregar miembro: " + e.getMessage());
+        e.printStackTrace();
+        return false;  
+    }
 }
     
 public boolean eliminarMiembro(int id_miembro) {
