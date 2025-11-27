@@ -40,7 +40,7 @@ public boolean agregarMiembro(int dni, String nombre, String apellido, int edad,
             System.out.println(" Error al agregar miembro: " + e.getMessage());
             e.printStackTrace();
             return false;
-        }
+        } 
     }
 
 public boolean eliminarMiembro(int id) {
