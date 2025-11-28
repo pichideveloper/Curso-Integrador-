@@ -8,6 +8,8 @@ import com.formdev.flatlaf.FlatLightLaf;
 
 import javax.swing.SwingUtilities;
 import util.LoginFrame;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 
 /**
@@ -15,6 +17,7 @@ import util.LoginFrame;
  * @author stefa
  */
 public class ProjectoFinalPOO {
+private static final Logger logger = LogManager.getLogger(ProjectoFinalPOO.class);
 
     public static void main(String[] args) {
 
@@ -26,6 +29,7 @@ public class ProjectoFinalPOO {
          */
         FlatLightLaf.install();
         SwingUtilities.invokeLater(() -> new LoginFrame().setVisible(true));
+        logger.info("El sistema ha iniciado correctamente.");
 
         
     }
